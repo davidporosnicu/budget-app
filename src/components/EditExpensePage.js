@@ -4,7 +4,7 @@ class EditExpensePage extends Component {
   render() {
     return (
       <div>
-        <p>EditExpensePage</p>
+        <p>Editing the expense with id of {this.props.match.params.id}</p>
       </div>
     );
   }
