@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import ExpensesList from "./ExpensesList";
 
 class ExpenseDashboardPage extends Component {
   render() {
     return (
       <div>
-        <p>Expense Dashboard Page</p>
+        <ExpensesList />
       </div>
     );
   }
