@@ -1,12 +1,12 @@
-const filterReducerDefaultState = {
+const filtersReducerDefaultState = {
   text: "",
   sortBy: "date",
   startDate: undefined,
   endDate: undefined
 };
 
-const filterReducer = (state = filterReducerDefaultState, action) => {
-  switch (action.payload) {
+export default (state = filtersReducerDefaultState, action) => {
+  switch (action.type) {
     case "SET_TEXT_FILTER":
       return {
         ...state,
@@ -36,5 +36,3 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
       return state;
   }
 };
-
-export default filterReducer;
