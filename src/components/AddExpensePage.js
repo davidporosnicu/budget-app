@@ -9,7 +9,7 @@ class AddExpensePage extends Component {
       <div>
         <h2>Add a new expense</h2>
         <ExpenseForm
-          expense={expense => {
+          onSubmit={expense => {
             this.props.dispatch(addExpense(expense));
             this.props.history.push("/");
           }}
