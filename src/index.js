@@ -6,7 +6,6 @@ import configureStore from "./store/configureStore";
 import "./styles/base/_base.scss";
 import { addExpense } from "./actions/expenses";
 import { setTextFilter } from "./actions/filters";
-// import getVisibleExpenses from "./selectors/expenses";
 
 const store = configureStore();
 
@@ -17,10 +16,7 @@ store.dispatch(
 store.dispatch(addExpense({ description: "rent", amount: 105000 }));
 store.dispatch(setTextFilter(""));
 
-const state = store.getState();
-console.log(state);
-// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-// console.log(visibleExpenses);
+// const state = store.getState();
 
 const jsx = (
   <Provider store={store}>

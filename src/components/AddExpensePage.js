@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addExpense } from "../actions/expenses";
 import ExpenseForm from "./ExpenseForm";
 
 class AddExpensePage extends Component {
@@ -6,10 +8,15 @@ class AddExpensePage extends Component {
     return (
       <div>
         <h2>Add a new expense</h2>
-        <ExpenseForm />
+        <ExpenseForm
+          expense={expense => {
+            this.props.dispatch(addExpense(expense));
+            this.props.history.push("/");
+          }}
+        />
       </div>
     );
   }
 }
 
-export default AddExpensePage;
+export default connect()(AddExpensePage);
