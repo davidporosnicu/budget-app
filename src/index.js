@@ -10,11 +10,15 @@ import { setTextFilter } from "./actions/filters";
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: "water bill" }));
-store.dispatch(addExpense({ description: "gas bill" }));
-store.dispatch(setTextFilter("bill"));
+store.dispatch(addExpense({ description: "water bill", createdAt: 1000 }));
+store.dispatch(
+  addExpense({ description: "gas bill", amount: 4500, createdAt: 1500 })
+);
+store.dispatch(addExpense({ description: "rent", amount: 105000 }));
+store.dispatch(setTextFilter(""));
 
-// const state = store.getState();
+const state = store.getState();
+console.log(state);
 // const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 // console.log(visibleExpenses);
 
