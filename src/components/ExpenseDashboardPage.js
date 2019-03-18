@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ExpensesList from "./ExpensesList";
+import ExpenseList from "./ExpenseList";
 import ExpenseListFilter from "./ExpenseListFilter";
 
 class ExpenseDashboardPage extends Component {
@@ -7,7 +7,7 @@ class ExpenseDashboardPage extends Component {
     return (
       <div>
         <ExpenseListFilter />
-        <ExpensesList />
+        <ExpenseList />
       </div>
     );
   }

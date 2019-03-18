@@ -4,7 +4,7 @@ import ExpenseListItem from "./ExpenseListItem";
 import selectExpenses from "../selectors/expenses";
 import ExpenseListFilter from "./ExpenseListFilter";
 
-export const ExpensesList = props => {
+export const ExpenseList = props => {
   const { expenses } = props;
   return (
     <div>
@@ -25,4 +25,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(ExpensesList);
+export default connect(mapStateToProps)(ExpenseList);

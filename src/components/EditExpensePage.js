@@ -7,7 +7,7 @@ import { removeExpense } from "../actions/expenses";
 class EditExpensePage extends Component {
   render() {
     const id = this.props.match.params.id;
-    console.log(id);
+
     return (
       <div>
         <p>Editing the expense with id of {this.props.match.params.id}</p>

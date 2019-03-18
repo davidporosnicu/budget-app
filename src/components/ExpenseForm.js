@@ -7,7 +7,7 @@ import moment from "moment";
 class ExpenseForm extends React.Component {
   constructor(props) {
     super();
-    console.log(props);
+
     this.state = {
       description: props.expense ? props.expense.description : "",
       note: props.expense ? props.expense.note : "",
@@ -47,7 +47,7 @@ class ExpenseForm extends React.Component {
     } else {
       this.setState({ error: "" });
     }
-    console.log(this.state);
+
     this.props.onSubmit({
       description: this.state.description,
       note: this.state.note,
