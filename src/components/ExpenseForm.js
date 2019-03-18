@@ -7,7 +7,6 @@ import moment from "moment";
 class ExpenseForm extends React.Component {
   constructor(props) {
     super();
-
     this.state = {
       description: props.expense ? props.expense.description : "",
       note: props.expense ? props.expense.note : "",
@@ -46,14 +45,13 @@ class ExpenseForm extends React.Component {
       this.setState({ error: "Please provide description and amount" });
     } else {
       this.setState({ error: "" });
+      this.props.onSubmit({
+        description: this.state.description,
+        note: this.state.note,
+        amount: parseFloat(this.state.amount, 10) * 100,
+        createdAt: this.state.createdAt.valueOf()
+      });
     }
-
-    this.props.onSubmit({
-      description: this.state.description,
-      note: this.state.note,
-      amount: parseFloat(this.state.amount, 10) * 100,
-      createdAt: this.state.createdAt.valueOf()
-    });
   };
 
   render() {
